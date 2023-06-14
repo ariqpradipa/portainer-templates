@@ -9,12 +9,12 @@
       "description": "Portainer Community Edition (CE) is a powerful, open source toolset that allows you to easily build and manage containers in Docker, Docker Swarm, Kubernetes and Azure ACI.",
       "post_up_info": "Visit https://{host-ip}:9443 to access the web interface.\nDeafault username: admin\nDefault password: changeme",
       "note": "Visit <a href='https://{host-ip}:<9443'>https://{host-ip}:9443 to access the web interface.</a> <ulstyle='padding-left:20px'><li>Default username: admin</li><li>Default password: changeme</li>",
-      "logo": "https://github.com/RAKWireless/portainer-templates/raw/master/logo/portainer_logo.png",
+      "logo": "https://github.com/ariqpradipa/portainer-templates/raw/master/logo/portainer_logo.png",
       "name": "Portainer",
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/Portainer/portainer.yml",
-        "url": "https://github.com/RAKWireless/portainer-templates"
+        "url": "https://github.com/ariqpradipa/portainer-templates"
       },
       "title": "Portainer",
       "type": "3-hidden",
@@ -168,12 +168,13 @@
             {
               "text": "SX1303",
               "value": "SX1303"
-            },            {
+            },
+            {
               "text": "SX1308",
               "value": "SX1308"
             }
           ],
-          "description": "Set RAKwireless Developer gateway model or LoRaWAN concentrator model number or Semtech LoRa chip model. When using concentrator model number or Semtech LoRa chip model, you will probably have to specify other features of the module."  
+          "description": "Set RAKwireless Developer gateway model or LoRaWAN concentrator model number or Semtech LoRa chip model. When using concentrator model number or Semtech LoRa chip model, you will probably have to specify other features of the module."
         },
         {
           "default": "/dev/spidev0.0",
@@ -377,7 +378,8 @@
             {
               "text": "SX1303",
               "value": "SX1303"
-            },            {
+            },
+            {
               "text": "SX1308",
               "value": "SX1308"
             }
@@ -760,7 +762,7 @@
       "type": 3,
       "repository": {
         "stackfile": "Stack/NodeRed/nodered.yml",
-        "url": "https://github.com/RAKWireless/portainer-templates"
+        "url": "https://github.com/ariqpradipa/portainer-templates"
       },
       "env": [
         {
@@ -878,7 +880,7 @@
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/Zigbee2MQTT/zigbee2mqtt.yml",
-        "url": "https://github.com/RAKWireless/portainer-templates"
+        "url": "https://github.com/ariqpradipa/portainer-templates"
       },
       "title": "Zigbee2MQTT",
       "network": "bridge",
@@ -959,7 +961,7 @@
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/Seafile/seafile.yml",
-        "url": "https://github.com/RAKWireless/portainer-templates"
+        "url": "https://github.com/ariqpradipa/portainer-templates"
       },
       "title": "Seafile",
       "type": 3
@@ -993,11 +995,11 @@
           "description": "Pre-authentication keys (“auth keys” for short) let you register new nodes without needing to sign in via a web browser, check https://tailscale.com/kb/1085/auth-keys/ for more details."
         }
       ],
-      "logo": "https://github.com/RAKWireless/portainer-templates/blob/master/logo/tailscale_logo.png?raw=true",
+      "logo": "https://github.com/ariqpradipa/portainer-templates/blob/master/logo/tailscale_logo.png?raw=true",
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/TimeScaledb/tailscale.yml",
-        "url": "https://github.com/RAKWireless/portainer-templates"
+        "url": "https://github.com/ariqpradipa/portainer-templates"
       },
       "title": "Tailscale",
       "name": "Tailscale",
@@ -1033,12 +1035,12 @@
           "description": "Frequency channels used by Chirpstack for uplink transmissions, valid values are AU915, EU868, US915 ... "
         }
       ],
-      "logo": "https://github.com/RAKWireless/portainer-templates/blob/master/logo/chirpstack_logo.png?raw=true",
+      "logo": "https://github.com/ariqpradipa/portainer-templates/blob/master/logo/chirpstack_logo.png?raw=true",
       "name": "ChirpStackNetworkServer",
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/ChirpStackNetworkServer/chirpstack.yml",
-        "url": "https://github.com/RAKWireless/portainer-templates"
+        "url": "https://github.com/ariqpradipa/portainer-templates"
       },
       "title": "ChirpStack Network Server",
       "network": "bridge",
@@ -1073,12 +1075,12 @@
           "description": "set this to the IP or domain name of the host you will be using to access the stack "
         }
       ],
-      "logo": "https://github.com/RAKWireless/portainer-templates/blob/master/logo/the_things_stack_logo.jpg?raw=true",
+      "logo": "https://github.com/ariqpradipa/portainer-templates/blob/master/logo/the_things_stack_logo.jpg?raw=true",
       "name": "TheThingsStackLNS",
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/TheThingsStackLNS/thethingsstack.yml",
-        "url": "https://github.com/RAKWireless/portainer-templates"
+        "url": "https://github.com/ariqpradipa/portainer-templates"
       },
       "title": "The Things Stack LNS",
       "network": "bridge",
@@ -1109,7 +1111,7 @@
         }
       ],
       "image": "eclipse-mosquitto:2",
-      "logo": "https://github.com/RAKWireless/portainer-templates/blob/master/logo/mosquitto_logo.png?raw=true",
+      "logo": "https://github.com/ariqpradipa/portainer-templates/blob/master/logo/mosquitto_logo.png?raw=true",
       "name": "Mosquitto",
       "platform": "linux",
       "ports": [
@@ -1162,7 +1164,7 @@
         }
       ],
       "image": "grafana/grafana-enterprise:8.4.4",
-      "logo": "https://github.com/RAKWireless/portainer-templates/blob/master/logo/grafana_logo.png?raw=true",
+      "logo": "https://github.com/ariqpradipa/portainer-templates/blob/master/logo/grafana_logo.png?raw=true",
       "name": "Grafana",
       "platform": "linux",
       "ports": [
@@ -1309,7 +1311,7 @@
           "name": "HOST_SYS"
         }
       ],
-      "logo": "https://github.com/RAKWireless/portainer-templates/blob/master/logo/telegraf_logo.png?raw=true",
+      "logo": "https://github.com/ariqpradipa/portainer-templates/blob/master/logo/telegraf_logo.png?raw=true",
       "name": "Telegraf",
       "platform": "linux",
       "restart_policy": "unless-stopped",
@@ -1317,7 +1319,7 @@
       "type": 3,
       "repository": {
         "stackfile": "Stack/Telegraf/telegraf.yml",
-        "url": "https://github.com/RAKWireless/portainer-templates"
+        "url": "https://github.com/ariqpradipa/portainer-templates"
       },
       "network": "bridge"
     },
@@ -1352,7 +1354,7 @@
         }
       ],
       "image": "thingsboard/tb-postgres:3.3.4",
-      "logo": "https://github.com/RAKWireless/portainer-templates/blob/master/logo/thingsboard_logo.jpg?raw=true",
+      "logo": "https://github.com/ariqpradipa/portainer-templates/blob/master/logo/thingsboard_logo.jpg?raw=true",
       "name": "ThingsBoard",
       "platform": "linux",
       "title": "ThingsBoard",
@@ -1454,7 +1456,7 @@
         }
       ],
       "image": "timescale/timescaledb:2.6.0-pg12",
-      "logo": "https://github.com/RAKWireless/portainer-templates/blob/master/logo/timescale_logo.png?raw=true",
+      "logo": "https://github.com/ariqpradipa/portainer-templates/blob/master/logo/timescale_logo.png?raw=true",
       "name": "TimeScaledb",
       "platform": "linux",
       "ports": [
@@ -1551,7 +1553,7 @@
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/Iperf3-Server/iperf3.yml",
-        "url": "https://github.com/RAKWireless/portainer-templates"
+        "url": "https://github.com/ariqpradipa/portainer-templates"
       },
       "title": "iperf3-server",
       "type": 3
@@ -1571,7 +1573,7 @@
       "type": 3,
       "repository": {
         "stackfile": "Stack/TagoCore/tagocore.yml",
-        "url": "https://github.com/RAKWireless/portainer-templates"
+        "url": "https://github.com/ariqpradipa/portainer-templates"
       },
       "network": "bridge",
       "env": [
@@ -1816,7 +1818,7 @@
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/FileBrowser/filebrowser.yml",
-        "url": "https://github.com/RAKWireless/portainer-templates"
+        "url": "https://github.com/ariqpradipa/portainer-templates"
       },
       "title": "File Browser",
       "type": 3
@@ -1857,7 +1859,7 @@
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/Gitea/gitea.yml",
-        "url": "https://github.com/RAKWireless/portainer-templates"
+        "url": "https://github.com/ariqpradipa/portainer-templates"
       },
       "title": "Gitea",
       "type": 3
@@ -1941,7 +1943,7 @@
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/AzureSQLEdge/azuresqledge.yml",
-        "url": "https://github.com/RAKWireless/portainer-templates"
+        "url": "https://github.com/ariqpradipa/portainer-templates"
       },
       "title": "Azure SQL Edge",
       "type": 3
@@ -1962,7 +1964,7 @@
       "restart_policy": "unless-stopped",
       "repository": {
         "stackfile": "Stack/AWSIoTGreengrass/awsiotgreengrass.yml",
-        "url": "https://github.com/RAKwireless/portainer-templates"
+        "url": "https://github.com/ariqpradipa/portainer-templates"
       },
       "env": [
         {
@@ -2072,7 +2074,7 @@
       "title": "Duplicati",
       "repository": {
         "stackfile": "Stack/Duplicati/duplicati.yml",
-        "url": "https://github.com/RAKWireless/portainer-templates"
+        "url": "https://github.com/ariqpradipa/portainer-templates"
       },
       "type": 3,
       "network": "bridge",
@@ -2100,12 +2102,12 @@
           "description": "specify the root password of mongo init database"
         }
       ],
-      "logo": "https://github.com/RAKWireless/portainer-templates/raw/master/logo/MongoDB_logo.png",
+      "logo": "https://github.com/ariqpradipa/portainer-templates/raw/master/logo/MongoDB_logo.png",
       "name": "mongodb",
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/MongoDB/mongodb.yml",
-        "url": "https://github.com/RAKWireless/portainer-templates"
+        "url": "https://github.com/ariqpradipa/portainer-templates"
       },
       "title": "MongoDB",
       "restart_policy": "unless-stopped",
@@ -2118,13 +2120,13 @@
       "description": "an OPC UA server instance based on a XML nodeset schema file uploaded to it online",
       "post_up_info": "Browse to http://{host-ip}:8080 to access the web based GUI. For more information, refere to the official documentation at https://hub.docker.com/r/hilschernetpi/netpi-opcua-server.",
       "note": "Browse to <a href='http://{host-ip}:<8080'>http://{host-ip}:8080</a> to access the web based GUI. <br>For more information, refere to the official documentation at <a href='https://hub.docker.com/r/hilschernetpi/netpi-opcua-server'>https://hub.docker.com/r/hilschernetpi/netpi-opcua-server</a>",
-      "logo": "https://github.com/RAKWireless/portainer-templates/raw/master/logo/opc_logo.png",
+      "logo": "https://github.com/ariqpradipa/portainer-templates/raw/master/logo/opc_logo.png",
       "name": "opcua-server",
       "platform": "linux",
       "restart_policy": "unless-stopped",
       "repository": {
         "stackfile": "Stack/OPCUA-Server/opcua-server.yml",
-        "url": "https://github.com/RAKWireless/portainer-templates"
+        "url": "https://github.com/ariqpradipa/portainer-templates"
       },
       "title": "OPC-UA Server",
       "type": 3
@@ -2150,13 +2152,13 @@
           "description": "specify the default password of rabbitmq"
         }
       ],
-      "logo": "https://github.com/RAKWireless/portainer-templates/raw/master/logo/RabbitMQ_logo.png",
+      "logo": "https://github.com/ariqpradipa/portainer-templates/raw/master/logo/RabbitMQ_logo.png",
       "name": "rabbitmq",
       "platform": "linux",
       "restart_policy": "unless-stopped",
       "repository": {
         "stackfile": "Stack/RabbitMQ/rabbitmq.yml",
-        "url": "https://github.com/RAKWireless/portainer-templates"
+        "url": "https://github.com/ariqpradipa/portainer-templates"
       },
       "title": "RabbitMQ",
       "type": 3
@@ -2185,12 +2187,12 @@
           "name": "TZ"
         }
       ],
-      "logo": "https://github.com/RAKWireless/portainer-templates/raw/master/logo/RapidScada_logo.png",
+      "logo": "https://github.com/ariqpradipa/portainer-templates/raw/master/logo/RapidScada_logo.png",
       "name": "rapidscada",
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/RapidScada/rapidscada.yml",
-        "url": "https://github.com/RAKWireless/portainer-templates"
+        "url": "https://github.com/ariqpradipa/portainer-templates"
       },
       "title": "RapidScada",
       "restart_policy": "unless-stopped",
