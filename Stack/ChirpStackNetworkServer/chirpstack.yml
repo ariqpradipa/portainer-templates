@@ -44,6 +44,8 @@ services:
       - PUID=${PUID:-1000}
       - PGID=${PGID:-100}
       - INTEGRATION__MQTT__AUTH__GENERIC__SERVERS=tcp://mosquitto:1883
+      - BACKEND__TYPE=basic_station
+      - BACKEND__BASIC_STATION__BIND=:3001
     depends_on: 
       - mosquitto
 
