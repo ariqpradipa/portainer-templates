@@ -46,6 +46,7 @@ services:
       - INTEGRATION__MQTT__AUTH__GENERIC__SERVERS=tcp://mosquitto:1883
       - BACKEND__TYPE=basic_station
       - BACKEND__BASIC_STATION__BIND=:3001
+      - BACKEND__BASIC_STATION__REGION=US915
     depends_on: 
       - mosquitto
 
