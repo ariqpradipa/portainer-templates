@@ -227,7 +227,25 @@
           "description": "Region of the TTN server to use, possible values: eu1, nam1, au1"
         },
         {
-          "default": "change this to your own TC key from TTN",
+          "default": "",
+          "label": "TC URI",
+          "name": "TC_URI",
+          "description": "Using LNS protocol: define a custom LNS server"
+        },
+        {
+          "default": "",
+          "label": "TC TRUST",
+          "name": "TC_TRUST",
+          "description": "Using LNS protocol: if you use a server other than TTN, you will have to provide the certificate for that server"
+        },
+        {
+          "default": "",
+          "label": "TC CERT",
+          "name": "TC_CERT",
+          "description": "Some servers will require you to include the client certificate"
+        },
+        {
+          "default": "change this to your own TC key from TTN or your custom LNS server",
           "label": "TC KEY",
           "name": "TC_KEY",
           "description": "Unique TTN Gateway Key used for TTS Community Edition pasted from TTN console"
