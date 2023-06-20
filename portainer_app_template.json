@@ -240,8 +240,8 @@
         },
         {
           "default": "",
-          "label": "TC CERT",
-          "name": "TC_CERT",
+          "label": "TC CRT",
+          "name": "TC_CRT",
           "description": "Some servers will require you to include the client certificate"
         },
         {
