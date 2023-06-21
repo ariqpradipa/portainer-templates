@@ -38,7 +38,7 @@ services:
     image: chirpstack/chirpstack-gateway-bridge:3
     restart: unless-stopped
     ports:
-      - 3001:3001
+      - 3001:3001/tcp
     environment:
       - TZ=${TZ:-Europe/London}
       - PUID=${PUID:-1000}
