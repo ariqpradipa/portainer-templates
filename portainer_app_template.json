@@ -1028,7 +1028,7 @@
         "LoRaWAN"
       ],
       "description": "The ChirpStack open-source LoRaWAN Network Server stack provides open-source components for LoRaWAN networks.",
-      "post_up_info": "Browse to http://{host-ip}:8080 to access the web interface. \nDefault username: admin\nDefault password: admin\nCheck https://github.com/brocaar/chirpstack-docker for for more details.",
+      "post_up_info": "v.1.1\nBrowse to http://{host-ip}:8080 to access the web interface. \nDefault username: admin\nDefault password: admin\nCheck https://github.com/brocaar/chirpstack-docker for for more details.",
       "note": "Browse to <a href='http://{host-ip}:8080'>http://{host-ip}:8080</a> to access the web interface.<ulstyle='padding-left:20px'><li>Default username: admin</li><li>Default password: admin</li>Check <a href='https://github.com/brocaar/chirpstack-docker'>ChirpStack Docker Github reposotory</a> for more details.",
       "env": [
         {
