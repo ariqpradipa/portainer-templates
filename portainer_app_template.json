@@ -1042,7 +1042,7 @@
           "name": "PGID"
         },
         {
-          "default": "Europe/London",
+          "default": "America/Los_Angeles",
           "label": "Time Zone",
           "name": "TZ"
         },
