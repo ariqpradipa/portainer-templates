@@ -93,15 +93,15 @@
           "name": "EXTERNAL_NETWORK_TYPE",
           "select": [
             {
-              "label": "aws",
+              "text": "aws",
               "value": "aws"
             },
             {
-              "label": "mqtt",
+              "text": "mqtt",
               "value": "mqtt"
             },
             {
-              "label": "serial",
+              "text": "serial",
               "value": "serial"
             }
           ],
