@@ -91,6 +91,7 @@
         {
           "label": "External Network Type",
           "name": "EXTERNAL_NETWORK_TYPE",
+          "default": "aws",
           "select": [
             {
               "text": "aws",
@@ -106,6 +107,22 @@
             }
           ],
           "description": "Set External Network Type, aws if the data sent via AWS IoT Core, mqtt if the data sent via MQTT, serial if the data sent via serial port"
+        },
+        {
+          "name": "HAS_LTE",
+          "label": "Has LTE",
+          "default": "0",
+          "select": [
+            {
+              "text": "True",
+              "value": "1"
+            },
+            {
+              "text": "False",
+              "value": "0"
+            }
+          ],
+          "description": "If MODEL id defined it will get this from it, otherwise defaults to 0 (without LTE)"
         },
         {
           "label": "External Network Host",
