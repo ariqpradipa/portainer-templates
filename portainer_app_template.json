@@ -9,12 +9,12 @@
       "description": "Portainer Community Edition (CE) is a powerful, open source toolset that allows you to easily build and manage containers in Docker, Docker Swarm, Kubernetes and Azure ACI.",
       "post_up_info": "Visit https://{host-ip}:9443 to access the web interface.\nDeafault username: admin\nDefault password: changeme",
       "note": "Visit <a href='https://{host-ip}:<9443'>https://{host-ip}:9443 to access the web interface.</a> <ulstyle='padding-left:20px'><li>Default username: admin</li><li>Default password: changeme</li>",
-      "logo": "https://github.com/ariqpradipa/portainer-templates/raw/master/logo/portainer_logo.png",
+      "logo": "https://github.com/RAKWireless/portainer-templates/raw/master/logo/portainer_logo.png",
       "name": "Portainer",
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/Portainer/portainer.yml",
-        "url": "https://github.com/ariqpradipa/portainer-templates"
+        "url": "https://github.com/RAKWireless/portainer-templates"
       },
       "title": "Portainer",
       "type": "3-hidden",
@@ -33,6 +33,130 @@
           "default": "Europe/London",
           "label": "Time Zone",
           "name": "TZ"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Other"
+      ],
+      "description": "Backend for Rak7391",
+      "post_up_info": "Visit https://{host-ip}:9443 to access the web interface.\nDeafault username: admin\nDefault password: changeme",
+      "note": "Visit <a href='https://{host-ip}:<9443'>https://{host-ip}:9443 to access the web interface.</a> <ulstyle='padding-left:20px'><li>Default username: admin</li><li>Default password: changeme</li>",
+      "logo": "https://github.com/RAKWireless/portainer-templates/raw/master/logo/portainer_logo.png",
+      "name": "rak7391-backend",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Stack/rak7391-backend/rak7391-backend.yml",
+        "url": "https://github.com/RAKWireless/portainer-templates"
+      },
+      "title": "rak7391-backend",
+      "type": 1,
+      "env": [
+        {
+          "default": "127.0.0.1:8000",
+          "label": "ChirpStack Host",
+          "name": "CHIRPSTACK_HOST"
+        },
+        {
+          "default": "admin",
+          "label": "ChirpStack Username",
+          "name": "CHIRPSTACK_AUTH_USERNAME"
+        },
+        {
+          "default": "admin",
+          "label": "ChirpStack Password",
+          "name": "CHIRPSTACK_AUTH_PASSWORD"
+        },
+        {
+          "default": "teapotlabs.db",
+          "label": "Database Name",
+          "name": "DATABASE_NAME"
+        },
+        {
+          "default": "127.0.0.1",
+          "label": "LoRaWan Network Host",
+          "name": "LORAWAN_NETWORK_HOST"
+        },
+        {
+          "default": 1883,
+          "label": "LoRaWan Network Port",
+          "name": "LORAWAN_NETWORK_PORT"
+        },
+        {
+          "default": "application/+/device/+/rx",
+          "label": "LoRaWan Network Topic",
+          "name": "LORAWAN_NETWORK_TOPIC"
+        },
+        {
+          "label": "External Network Type",
+          "name": "EXTERNAL_NETWORK_TYPE",
+          "select": [
+            {
+              "label": "aws",
+              "value": "aws"
+            },
+            {
+              "label": "mqtt",
+              "value": "mqtt"
+            },
+            {
+              "label": "serial",
+              "value": "serial"
+            }
+          ],
+          "description": "Set External Network Type, aws if the data sent via AWS IoT Core, mqtt if the data sent via MQTT, serial if the data sent via serial port"
+        },
+        {
+          "label": "External Network Host",
+          "name": "EXTERNAL_NETWORK_HOST",
+          "description": "Set External Network Port or aws endpoint, leave it blank if you are using serial port."
+        },
+        {
+          "label": "External Network Port",
+          "name": "EXTERNAL_NETWORK_PORT",
+          "description": "Set External Network Port, leave it blank if you are using aws or serial port."
+        },
+        {
+          "label": "External Network Topic Data Out",
+          "name": "EXTERNAL_NETWORK_TOPIC_DATA_OUT",
+          "description": "Set External Network Topic Data Out, leave it blank if you are using serial port."
+        },
+        {
+          "label": "External Network Topic Data In",
+          "name": "EXTERNAL_NETWORK_TOPIC_DATA_IN",
+          "description": "Set External Network Topic Data In, leave it blank if you are using serial port."
+        },
+        {
+          "label": "External Network Root Cert",
+          "name": "EXTERNAL_NETWORK_ROOT_CERT",
+          "description": "Set External Network Root Cert, only for aws."
+        },
+        {
+          "label": "External Network Certificate",
+          "name": "EXTERNAL_NETWORK_CERTIFICATE",
+          "description": "Set External Network Certificate, only for aws."
+        },
+        {
+          "label": "External Network Private Key",
+          "name": "EXTERNAL_NETWORK_PRIVATE_KEY",
+          "description": "Set External Network Private Key, only for aws."
+        },
+        {
+          "label": "External Network Serialport",
+          "name": "EXTERNAL_NETWORK_SERIALPORT",
+          "description": "Set External Network Serialport, only for serial."
+        },
+        {
+          "label": "External Network Baudrate",
+          "name": "EXTERNAL_NETWORK_BAUDRATE",
+          "description": "Set External Network Baudrate, only for serial."
+        },
+        {
+          "default": 50,
+          "label": "Send Stored Device Message Delay",
+          "name": "SEND_STORED_DEVICE_MESSAGE_DELAY",
+          "description": "Set Send Stored Device Message Delay in seconds"
         }
       ]
     },
@@ -65,7 +189,7 @@
           "name": "PGID"
         },
         {
-          "default": "America/Los_Angeles",
+          "default": "Europe/London",
           "label": "Time Zone",
           "name": "TZ"
         },
@@ -177,7 +301,7 @@
           "description": "Set RAKwireless Developer gateway model or LoRaWAN concentrator model number or Semtech LoRa chip model. When using concentrator model number or Semtech LoRa chip model, you will probably have to specify other features of the module."
         },
         {
-          "default": "/dev/ttyACM0",
+          "default": "/dev/spidev0.0",
           "label": "Device",
           "name": "DEVICE",
           "description": "Where the concentrator is connected to"
@@ -221,31 +345,13 @@
           "description": "Gateway EUI to use, autogenerated from GATEWAY EUI NIC if defined, otherwise in order from: eth0, wlan0, usb0"
         },
         {
-          "default": "",
+          "default": "eu1",
           "label": "TTN REGION",
           "name": "TTN_REGION",
           "description": "Region of the TTN server to use, possible values: eu1, nam1, au1"
         },
         {
-          "default": "",
-          "label": "TC URI",
-          "name": "TC_URI",
-          "description": "Using LNS protocol: define a custom LNS server"
-        },
-        {
-          "default": "-----BEGIN CERTIFICATE-----MIIDSDCCAjCgAwIBAgIUBvmUGD55aEspmlECBS2TODBCWT4wDQYJKoZIhvcNAQELBQAwFTETMBEGA1UEAwwKY2hpcnBzdGFjazAeFw0yMzA2MTIxNjEyMTNaFw0zMzA2MDkxNjEyMTNaMBUxEzARBgNVBAMMCmNoaXJwc3RhY2swggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDBr6j+xOSYaHu2dJs/TcOx1O0uYjw4l/aCAp8lmiXOeqxj5DS6MheXO/iqSkJCicHWPfc+j7YRhE+63w4BKdavWjtNchNmF8NZ//gP6Y5ZoIydvFcmE0xU4ZFYBTsW05Wjz8rTwiq2Yt92RmFQnKEVsqIYNvCgsOYGbaHrWn90SWAItxMUfxM6to44g3b3Th6qNT8xTH/yRbsnUtuZ1kqEw7cH2Ngs1B917pb08hvK+qwGJKxdjQI66za5X9/87hQw9nvKLO5qDv3svC2mgG8JqWB/buME4lBKHV6J8y56E6NQ0sbjbUTP82NR7bqLWoZtiudrZDLqGxjRlwUBSyNTAgMBAAGjgY8wgYwwHQYDVR0OBBYEFDBgPV6khcJcZAXe5Tom8iMOnfCpMFAGA1UdIwRJMEeAFDBgPV6khcJcZAXe5Tom8iMOnfCpoRmkFzAVMRMwEQYDVQQDDApjaGlycHN0YWNrghQG+ZQYPnloSymaUQIFLZM4MEJZPjAMBgNVHRMEBTADAQH/MAsGA1UdDwQEAwIBBjANBgkqhkiG9w0BAQsFAAOCAQEAD361rsoAKPx6Y/Ib6tUudaXIjoRJXMy5P4s43LoYvpvBwCVqQecrGfmr9K7gQd0qKa+dbcqODVJUjdbYWNlA0HUDPnsHYGxWsUMmrFmdktJCEuOhgezYTnbcETZWzJ+cJsnT2dkBHVO/waViOxm7w+9pwduY+kLx5R5PprayDe30ynjBhoWE7MxshrRLAmDCpncVuuSBhTDj/JCwMX5AyYeae53UcsQZD4EF3P+NJ64HVd4nd/j42WBTSfdInuzsL2v6VqWFmWiCYSSxKYVwHMuYEQnOcY1WRv+uQgGIJxKuGRmVi1g/qH7X0jJMXWRp0CtjYHbL1dNlciJ/UOnptA==-----END CERTIFICATE-----",
-          "label": "TC TRUST",
-          "name": "TC_TRUST",
-          "description": "Using LNS protocol: if you use a server other than TTN, you will have to provide the certificate for that server"
-        },
-        {
-          "default": "-----BEGIN CERTIFICATE-----MIIDSDCCAjCgAwIBAgIUBvmUGD55aEspmlECBS2TODBCWT4wDQYJKoZIhvcNAQELBQAwFTETMBEGA1UEAwwKY2hpcnBzdGFjazAeFw0yMzA2MTIxNjEyMTNaFw0zMzA2MDkxNjEyMTNaMBUxEzARBgNVBAMMCmNoaXJwc3RhY2swggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDBr6j+xOSYaHu2dJs/TcOx1O0uYjw4l/aCAp8lmiXOeqxj5DS6MheXO/iqSkJCicHWPfc+j7YRhE+63w4BKdavWjtNchNmF8NZ//gP6Y5ZoIydvFcmE0xU4ZFYBTsW05Wjz8rTwiq2Yt92RmFQnKEVsqIYNvCgsOYGbaHrWn90SWAItxMUfxM6to44g3b3Th6qNT8xTH/yRbsnUtuZ1kqEw7cH2Ngs1B917pb08hvK+qwGJKxdjQI66za5X9/87hQw9nvKLO5qDv3svC2mgG8JqWB/buME4lBKHV6J8y56E6NQ0sbjbUTP82NR7bqLWoZtiudrZDLqGxjRlwUBSyNTAgMBAAGjgY8wgYwwHQYDVR0OBBYEFDBgPV6khcJcZAXe5Tom8iMOnfCpMFAGA1UdIwRJMEeAFDBgPV6khcJcZAXe5Tom8iMOnfCpoRmkFzAVMRMwEQYDVQQDDApjaGlycHN0YWNrghQG+ZQYPnloSymaUQIFLZM4MEJZPjAMBgNVHRMEBTADAQH/MAsGA1UdDwQEAwIBBjANBgkqhkiG9w0BAQsFAAOCAQEAD361rsoAKPx6Y/Ib6tUudaXIjoRJXMy5P4s43LoYvpvBwCVqQecrGfmr9K7gQd0qKa+dbcqODVJUjdbYWNlA0HUDPnsHYGxWsUMmrFmdktJCEuOhgezYTnbcETZWzJ+cJsnT2dkBHVO/waViOxm7w+9pwduY+kLx5R5PprayDe30ynjBhoWE7MxshrRLAmDCpncVuuSBhTDj/JCwMX5AyYeae53UcsQZD4EF3P+NJ64HVd4nd/j42WBTSfdInuzsL2v6VqWFmWiCYSSxKYVwHMuYEQnOcY1WRv+uQgGIJxKuGRmVi1g/qH7X0jJMXWRp0CtjYHbL1dNlciJ/UOnptA==-----END CERTIFICATE-----",
-          "label": "TC CRT",
-          "name": "TC_CRT",
-          "description": "Some servers will require you to include the client certificate"
-        },
-        {
-          "default": "-----BEGIN PRIVATE KEY-----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-----END PRIVATE KEY-----",
+          "default": "change this to your own TC key from TTN",
           "label": "TC KEY",
           "name": "TC_KEY",
           "description": "Unique TTN Gateway Key used for TTS Community Edition pasted from TTN console"
@@ -780,7 +886,7 @@
       "type": 3,
       "repository": {
         "stackfile": "Stack/NodeRed/nodered.yml",
-        "url": "https://github.com/ariqpradipa/portainer-templates"
+        "url": "https://github.com/RAKWireless/portainer-templates"
       },
       "env": [
         {
@@ -898,7 +1004,7 @@
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/Zigbee2MQTT/zigbee2mqtt.yml",
-        "url": "https://github.com/ariqpradipa/portainer-templates"
+        "url": "https://github.com/RAKWireless/portainer-templates"
       },
       "title": "Zigbee2MQTT",
       "network": "bridge",
@@ -979,7 +1085,7 @@
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/Seafile/seafile.yml",
-        "url": "https://github.com/ariqpradipa/portainer-templates"
+        "url": "https://github.com/RAKWireless/portainer-templates"
       },
       "title": "Seafile",
       "type": 3
@@ -1013,11 +1119,11 @@
           "description": "Pre-authentication keys (“auth keys” for short) let you register new nodes without needing to sign in via a web browser, check https://tailscale.com/kb/1085/auth-keys/ for more details."
         }
       ],
-      "logo": "https://github.com/ariqpradipa/portainer-templates/blob/master/logo/tailscale_logo.png?raw=true",
+      "logo": "https://github.com/RAKWireless/portainer-templates/blob/master/logo/tailscale_logo.png?raw=true",
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/TimeScaledb/tailscale.yml",
-        "url": "https://github.com/ariqpradipa/portainer-templates"
+        "url": "https://github.com/RAKWireless/portainer-templates"
       },
       "title": "Tailscale",
       "name": "Tailscale",
@@ -1028,8 +1134,8 @@
         "LoRaWAN"
       ],
       "description": "The ChirpStack open-source LoRaWAN Network Server stack provides open-source components for LoRaWAN networks.",
-      "post_up_info": "v.1.3\nBrowse to http://{host-ip}:8080 to access the web interface. \nDefault username: admin\nDefault password: admin\nCheck https://github.com/brocaar/chirpstack-docker for for more details.",
-      "note": "v.1.3\nBrowse to <a href='http://{host-ip}:8080'>http://{host-ip}:8080</a> to access the web interface.<ulstyle='padding-left:20px'><li>Default username: admin</li><li>Default password: admin</li>Check <a href='https://github.com/brocaar/chirpstack-docker'>ChirpStack Docker Github reposotory</a> for more details.",
+      "post_up_info": "Browse to http://{host-ip}:8080 to access the web interface. \nDefault username: admin\nDefault password: admin\nCheck https://github.com/brocaar/chirpstack-docker for for more details.",
+      "note": "Browse to <a href='http://{host-ip}:8080'>http://{host-ip}:8080</a> to access the web interface.<ulstyle='padding-left:20px'><li>Default username: admin</li><li>Default password: admin</li>Check <a href='https://github.com/brocaar/chirpstack-docker'>ChirpStack Docker Github reposotory</a> for more details.",
       "env": [
         {
           "default": "1000",
@@ -1042,23 +1148,23 @@
           "name": "PGID"
         },
         {
-          "default": "America/Los_Angeles",
+          "default": "Europe/London",
           "label": "Time Zone",
           "name": "TZ"
         },
         {
-          "default": "US915",
+          "default": "EU868",
           "label": "Network Server Band",
           "name": "NETWORK_SERVER__BAND__NAME",
           "description": "Frequency channels used by Chirpstack for uplink transmissions, valid values are AU915, EU868, US915 ... "
         }
       ],
-      "logo": "https://github.com/ariqpradipa/portainer-templates/blob/master/logo/chirpstack_logo.png?raw=true",
+      "logo": "https://github.com/RAKWireless/portainer-templates/blob/master/logo/chirpstack_logo.png?raw=true",
       "name": "ChirpStackNetworkServer",
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/ChirpStackNetworkServer/chirpstack.yml",
-        "url": "https://github.com/ariqpradipa/portainer-templates"
+        "url": "https://github.com/RAKWireless/portainer-templates"
       },
       "title": "ChirpStack Network Server",
       "network": "bridge",
@@ -1093,12 +1199,12 @@
           "description": "set this to the IP or domain name of the host you will be using to access the stack "
         }
       ],
-      "logo": "https://github.com/ariqpradipa/portainer-templates/blob/master/logo/the_things_stack_logo.jpg?raw=true",
+      "logo": "https://github.com/RAKWireless/portainer-templates/blob/master/logo/the_things_stack_logo.jpg?raw=true",
       "name": "TheThingsStackLNS",
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/TheThingsStackLNS/thethingsstack.yml",
-        "url": "https://github.com/ariqpradipa/portainer-templates"
+        "url": "https://github.com/RAKWireless/portainer-templates"
       },
       "title": "The Things Stack LNS",
       "network": "bridge",
@@ -1129,7 +1235,7 @@
         }
       ],
       "image": "eclipse-mosquitto:2",
-      "logo": "https://github.com/ariqpradipa/portainer-templates/blob/master/logo/mosquitto_logo.png?raw=true",
+      "logo": "https://github.com/RAKWireless/portainer-templates/blob/master/logo/mosquitto_logo.png?raw=true",
       "name": "Mosquitto",
       "platform": "linux",
       "ports": [
@@ -1182,7 +1288,7 @@
         }
       ],
       "image": "grafana/grafana-enterprise:8.4.4",
-      "logo": "https://github.com/ariqpradipa/portainer-templates/blob/master/logo/grafana_logo.png?raw=true",
+      "logo": "https://github.com/RAKWireless/portainer-templates/blob/master/logo/grafana_logo.png?raw=true",
       "name": "Grafana",
       "platform": "linux",
       "ports": [
@@ -1329,7 +1435,7 @@
           "name": "HOST_SYS"
         }
       ],
-      "logo": "https://github.com/ariqpradipa/portainer-templates/blob/master/logo/telegraf_logo.png?raw=true",
+      "logo": "https://github.com/RAKWireless/portainer-templates/blob/master/logo/telegraf_logo.png?raw=true",
       "name": "Telegraf",
       "platform": "linux",
       "restart_policy": "unless-stopped",
@@ -1337,7 +1443,7 @@
       "type": 3,
       "repository": {
         "stackfile": "Stack/Telegraf/telegraf.yml",
-        "url": "https://github.com/ariqpradipa/portainer-templates"
+        "url": "https://github.com/RAKWireless/portainer-templates"
       },
       "network": "bridge"
     },
@@ -1372,7 +1478,7 @@
         }
       ],
       "image": "thingsboard/tb-postgres:3.3.4",
-      "logo": "https://github.com/ariqpradipa/portainer-templates/blob/master/logo/thingsboard_logo.jpg?raw=true",
+      "logo": "https://github.com/RAKWireless/portainer-templates/blob/master/logo/thingsboard_logo.jpg?raw=true",
       "name": "ThingsBoard",
       "platform": "linux",
       "title": "ThingsBoard",
@@ -1474,7 +1580,7 @@
         }
       ],
       "image": "timescale/timescaledb:2.6.0-pg12",
-      "logo": "https://github.com/ariqpradipa/portainer-templates/blob/master/logo/timescale_logo.png?raw=true",
+      "logo": "https://github.com/RAKWireless/portainer-templates/blob/master/logo/timescale_logo.png?raw=true",
       "name": "TimeScaledb",
       "platform": "linux",
       "ports": [
@@ -1571,7 +1677,7 @@
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/Iperf3-Server/iperf3.yml",
-        "url": "https://github.com/ariqpradipa/portainer-templates"
+        "url": "https://github.com/RAKWireless/portainer-templates"
       },
       "title": "iperf3-server",
       "type": 3
@@ -1591,7 +1697,7 @@
       "type": 3,
       "repository": {
         "stackfile": "Stack/TagoCore/tagocore.yml",
-        "url": "https://github.com/ariqpradipa/portainer-templates"
+        "url": "https://github.com/RAKWireless/portainer-templates"
       },
       "network": "bridge",
       "env": [
@@ -1836,7 +1942,7 @@
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/FileBrowser/filebrowser.yml",
-        "url": "https://github.com/ariqpradipa/portainer-templates"
+        "url": "https://github.com/RAKWireless/portainer-templates"
       },
       "title": "File Browser",
       "type": 3
@@ -1877,7 +1983,7 @@
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/Gitea/gitea.yml",
-        "url": "https://github.com/ariqpradipa/portainer-templates"
+        "url": "https://github.com/RAKWireless/portainer-templates"
       },
       "title": "Gitea",
       "type": 3
@@ -1961,7 +2067,7 @@
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/AzureSQLEdge/azuresqledge.yml",
-        "url": "https://github.com/ariqpradipa/portainer-templates"
+        "url": "https://github.com/RAKWireless/portainer-templates"
       },
       "title": "Azure SQL Edge",
       "type": 3
@@ -1982,7 +2088,7 @@
       "restart_policy": "unless-stopped",
       "repository": {
         "stackfile": "Stack/AWSIoTGreengrass/awsiotgreengrass.yml",
-        "url": "https://github.com/ariqpradipa/portainer-templates"
+        "url": "https://github.com/RAKwireless/portainer-templates"
       },
       "env": [
         {
@@ -2092,7 +2198,7 @@
       "title": "Duplicati",
       "repository": {
         "stackfile": "Stack/Duplicati/duplicati.yml",
-        "url": "https://github.com/ariqpradipa/portainer-templates"
+        "url": "https://github.com/RAKWireless/portainer-templates"
       },
       "type": 3,
       "network": "bridge",
@@ -2120,12 +2226,12 @@
           "description": "specify the root password of mongo init database"
         }
       ],
-      "logo": "https://github.com/ariqpradipa/portainer-templates/raw/master/logo/MongoDB_logo.png",
+      "logo": "https://github.com/RAKWireless/portainer-templates/raw/master/logo/MongoDB_logo.png",
       "name": "mongodb",
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/MongoDB/mongodb.yml",
-        "url": "https://github.com/ariqpradipa/portainer-templates"
+        "url": "https://github.com/RAKWireless/portainer-templates"
       },
       "title": "MongoDB",
       "restart_policy": "unless-stopped",
@@ -2138,13 +2244,13 @@
       "description": "an OPC UA server instance based on a XML nodeset schema file uploaded to it online",
       "post_up_info": "Browse to http://{host-ip}:8080 to access the web based GUI. For more information, refere to the official documentation at https://hub.docker.com/r/hilschernetpi/netpi-opcua-server.",
       "note": "Browse to <a href='http://{host-ip}:<8080'>http://{host-ip}:8080</a> to access the web based GUI. <br>For more information, refere to the official documentation at <a href='https://hub.docker.com/r/hilschernetpi/netpi-opcua-server'>https://hub.docker.com/r/hilschernetpi/netpi-opcua-server</a>",
-      "logo": "https://github.com/ariqpradipa/portainer-templates/raw/master/logo/opc_logo.png",
+      "logo": "https://github.com/RAKWireless/portainer-templates/raw/master/logo/opc_logo.png",
       "name": "opcua-server",
       "platform": "linux",
       "restart_policy": "unless-stopped",
       "repository": {
         "stackfile": "Stack/OPCUA-Server/opcua-server.yml",
-        "url": "https://github.com/ariqpradipa/portainer-templates"
+        "url": "https://github.com/RAKWireless/portainer-templates"
       },
       "title": "OPC-UA Server",
       "type": 3
@@ -2170,13 +2276,13 @@
           "description": "specify the default password of rabbitmq"
         }
       ],
-      "logo": "https://github.com/ariqpradipa/portainer-templates/raw/master/logo/RabbitMQ_logo.png",
+      "logo": "https://github.com/RAKWireless/portainer-templates/raw/master/logo/RabbitMQ_logo.png",
       "name": "rabbitmq",
       "platform": "linux",
       "restart_policy": "unless-stopped",
       "repository": {
         "stackfile": "Stack/RabbitMQ/rabbitmq.yml",
-        "url": "https://github.com/ariqpradipa/portainer-templates"
+        "url": "https://github.com/RAKWireless/portainer-templates"
       },
       "title": "RabbitMQ",
       "type": 3
@@ -2205,12 +2311,12 @@
           "name": "TZ"
         }
       ],
-      "logo": "https://github.com/ariqpradipa/portainer-templates/raw/master/logo/RapidScada_logo.png",
+      "logo": "https://github.com/RAKWireless/portainer-templates/raw/master/logo/RapidScada_logo.png",
       "name": "rapidscada",
       "platform": "linux",
       "repository": {
         "stackfile": "Stack/RapidScada/rapidscada.yml",
-        "url": "https://github.com/ariqpradipa/portainer-templates"
+        "url": "https://github.com/RAKWireless/portainer-templates"
       },
       "title": "RapidScada",
       "restart_policy": "unless-stopped",
@@ -2275,22 +2381,22 @@
         {
           "label": "JOIN_NETWORKS",
           "name": "ZEROTIER_JOIN_NETWORKS",
-          "description":"the network id that you want to join(required)"
+          "description": "the network id that you want to join(required)"
         },
         {
           "label": "API_SECRET",
           "name": "ZEROTIER_API_SECRET",
-          "description":"authtoken used to interact with the control socket(optional)"
+          "description": "authtoken used to interact with the control socket(optional)"
         },
         {
           "label": "IDENTITY_PUBLIC",
           "name": "ZEROTIER_IDENTITY_PUBLIC",
-          "description":"zero identity public(optional)"
+          "description": "zero identity public(optional)"
         },
         {
           "label": "IDENTITY_SECRET",
           "name": "ZEROTIER_IDENTITY_SECRET",
-          "description":"zero identity sercret(optional)"
+          "description": "zero identity sercret(optional)"
         }
       ],
       "image": "zerotier/zerotier:1.10.6",
@@ -2302,7 +2408,7 @@
       "type": 1,
       "network": "host",
       "privileged": true,
-      "note":"Check <a href='https://hub.docker.com/r/zerotier/zerotier'>ZeroIter in Docker Hub </a> for more details."
+      "note": "Check <a href='https://hub.docker.com/r/zerotier/zerotier'>ZeroIter in Docker Hub </a> for more details."
     }
   ]
 }
