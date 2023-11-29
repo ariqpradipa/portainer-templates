@@ -50,7 +50,6 @@
         "stackfile": "Stack/rak7391-backend/rak7391-backend.yml",
         "url": "https://github.com/RAKWireless/portainer-templates"
       },
-      "restart_policy": "unless-stopped",
       "title": "rak7391-backend",
       "type": 1,
       "env": [
