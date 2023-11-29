@@ -3,7 +3,7 @@ version: "2"
 services:
   rak7391-backend:
     restart: unless-stopped
-    image: encores/rak7391-backend:latest
+    image: encores/rak7391-backend:rak
     volumes:
       - .:/app
     environment:
