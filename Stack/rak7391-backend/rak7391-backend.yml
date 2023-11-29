@@ -1,10 +1,9 @@
-version: '3'
+version: "2"
 
 services:
   rak7391-backend:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    restart: unless-stopped
+    image: encores/rak7391-backend:latest
     volumes:
       - .:/app
     environment:
@@ -26,7 +25,7 @@ services:
       - EXTERNAL_NETWORK_ROOT_CERT=${EXTERNAL_NETWORK_ROOT_CERT:-/BEGIN ROOT CERT/}
       - EXTERNAL_NETWORK_CERTIFICATE=${EXTERNAL_NETWORK_CERTIFICATE:-/BEGIN CERT/}
       - EXTERNAL_NETWORK_PRIVATE_KEY=${EXTERNAL_NETWORK_PRIVATE_KEY:-/BEGIN PRIVATE KEY/}
-      
+
       - EXTERNAL_NETWORK_SERIALPORT=${EXTERNAL_NETWORK_SERIALPORT:-/dev/ttyUSB0}
       - EXTERNAL_NETWORK_BAUDRATE=${EXTERNAL_NETWORK_BAUDRATE:-115200}
 
