@@ -4,8 +4,6 @@ services:
   rak7391-backend:
     restart: unless-stopped
     image: encores/rak7391-backend:rak
-    volumes:
-      - .:/app
     environment:
       - CHIRPSTACK_HOST=${CHIRPSTACK_HOST:-127.0.0.1:8080}
       - CHIRPSTACK_AUTH_USERNAME=${CHIRPSTACK_AUTH_USERNAME:-admin}
