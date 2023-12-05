@@ -40,7 +40,7 @@
       "categories": [
         "Other"
       ],
-      "description": "Backend for Rak7391 v0.3",
+      "description": "Backend for Rak7391 v0.4",
       "post_up_info": "Visit https://{host-ip}:9443 to access the web interface.\nDeafault username: admin\nDefault password: changeme",
       "note": "Visit <a href='https://{host-ip}:<9443'>https://{host-ip}:9443 to access the web interface.</a> <ulstyle='padding-left:20px'><li>Default username: admin</li><li>Default password: changeme</li>",
       "logo": "https://github.com/RAKWireless/portainer-templates/raw/master/logo/portainer_logo.png",
